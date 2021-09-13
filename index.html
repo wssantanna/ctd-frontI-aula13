@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 13 - Formulários</title>
+</head>
+<style>
+
+    body { font-family: Arial, Helvetica, sans-serif; }
+    div { margin: 25px 0; }
+
+</style>
+<body>
+
+    <!--
+
+        action: Define a rota que os dados do form serão processados.
+        method: Define como serão processadors os dados do formulário (qual o método); 
+        Obs.: Na versão 5 do HTML, existem duas opções, sendo elas GET e POST.
+
+    -->
+
+    <section class="container">
+
+        <h1>Cadastro usuário</h1>
+
+        <form action="/" method="POST">
+            <div>
+                <!-- 
+                    label tem como função atribuir um texto descritivo a um campo.
+                    for: associada o label ao input através da indentificação.
+                -->
+                <label for="nome">Nome</label>
+                <!-- 
+                    type: define que tipo de valor o input recebe.
+                    name: identifica a o valor inserido no input após o envio do formulário.
+                    id: identifica o input.
+                    placeholder: permite inserir um texto descritivo no input que se apagará a partir de qualque valor digitado pelo usuário. 
+                -->
+                <input type="text" name="nome" id="nome" placeholder="Seu nome">
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" placeholder="Seu e-mail principal">
+            </div>
+            <div>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" placeholder="Digite uma senha com no mínimo 8 caracteres">
+            </div>
+            <div>
+                <label for="senha-confirmacao">Confirme sua Senha</label>
+                <input type="password" name="senha-confirmacao" placeholder="Digite a senha novamente">
+            </div>
+            <div>
+                <label for="genero">Genero</label>
+                <!-- 
+                    select é um input de múltiplas escolhas, você precisa selecionar um  opção para enviar.
+                -->
+                <select name="genero" id="genero">
+                    <!--
+                        option são as opções que o usuário deverá escolher.
+                        value: o valor que será enviado pelo formulário.
+                        selected: define o valor padrão padrão.
+                    -->
+                    <option value="outros" selected>Prefiro não informar</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                </select>
+            </div>
+            <div>
+                <!-- 
+                    button tem como objetivo executar uma ação.
+                    type: define que tipo de ação deseja realizar via html. 
+                -->
+                <button type="reset">Cancelar</button>
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+
+    </section>
+
+</body>
+</html>
