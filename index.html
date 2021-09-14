@@ -36,20 +36,21 @@
                     name: identifica a o valor inserido no input após o envio do formulário.
                     id: identifica o input.
                     placeholder: permite inserir um texto descritivo no input que se apagará a partir de qualque valor digitado pelo usuário. 
+                    required: 
                 -->
-                <input type="text" name="nome" id="nome" placeholder="Seu nome">
+                <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
             </div>
             <div>
                 <label for="email">E-mail</label>
-                <input type="email" name="email" placeholder="Seu e-mail principal">
+                <input type="email" name="email" placeholder="Seu e-mail principal" required>
             </div>
             <div>
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" placeholder="Digite uma senha com no mínimo 8 caracteres">
+                <input type="password" name="senha" placeholder="Digite uma senha com no mínimo 8 caracteres" required>
             </div>
             <div>
                 <label for="senhaConfirmacao">Confirme sua Senha</label>
-                <input type="password" name="senhaConfirmacao" placeholder="Digite a senha novamente">
+                <input type="password" name="senhaConfirmacao" placeholder="Digite a senha novamente" required>
             </div>
             <div>
                 <label for="genero">Genero</label>
@@ -62,6 +63,7 @@
                         value: o valor que será enviado pelo formulário.
                         selected: define o valor padrão padrão.
                     -->
+                    <option disabled>Selecione uma opção</option>
                     <option value="outros" selected>Prefiro não informar</option>
                     <option value="masculino">Masculino</option>
                     <option value="feminino">Feminino</option>
